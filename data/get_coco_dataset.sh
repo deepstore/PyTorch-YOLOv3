@@ -28,5 +28,6 @@ tar xzf labels.tgz
 unzip -q instances_train-val2014.zip
 
 # Set Up Image Lists
+PWD=`pwd`
 paste <(awk "{print \"$PWD\"}" <5k.part) 5k.part | tr -d '\t' > 5k.txt
 paste <(awk "{print \"$PWD\"}" <trainvalno5k.part) trainvalno5k.part | tr -d '\t' > trainvalno5k.txt
